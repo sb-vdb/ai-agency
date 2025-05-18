@@ -1,0 +1,12 @@
+[project]
+name = "summarizer-agent"
+version = "0.1.0"
+description = "a demo for a summarizing agent using langchain and ollama"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3.25",
+    "langchain-ollama>=0.3.3",
+    "langgraph>=0.4.5",
+    "notebook>=7.4.2",
+]
