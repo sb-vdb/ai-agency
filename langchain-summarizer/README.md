@@ -2,17 +2,17 @@
 
 <a id ="model-based-article-summarization"></a>
 
-- [Model-based Article Summarization](#model-based-article-summarization)
-  - [Setup](#setup)
-  - [Building the Article Summarizer Worker](#building-the-article-summarizer-worker)
-    - [Model(-Factory)](#model-factory)
-    - [Structured Output](#structured-output)
-    - [Agentic Unit](#agentic-unit)
-  - [Prepare Agents with different Models](#prepare-agents-with-different-models)
-  - [Runner](#runner)
-    - [HTML Retrieval](#html-retrieval)
-    - [Batch Runner](#batch-runner)
-    - [Unit Runner (Tool)](#unit-runner-tool)
+- [Introduction](#introduction)
+- [Setup](#setup)
+- [Building the Article Summarizer Worker](#building-the-article-summarizer-worker)
+  - [Model(-Factory)](#model-factory)
+  - [Structured Output](#structured-output)
+  - [Agentic Unit](#agentic-unit)
+- [Prepare Agents with different Models](#prepare-agents-with-different-models)
+- [Runner](#runner)
+  - [HTML Retrieval](#html-retrieval)
+  - [Batch Runner](#batch-runner)
+  - [Unit Runner (Tool)](#unit-runner-tool)
 
 <a id="introduction">Introduction</a>
 - This case walks through creating AI applications and agents with **LangChain** and **LangGraph**.
@@ -68,7 +68,7 @@ But we want to enable benchmarking various Ollama models. Hence, we make a funct
 ```python
 from langchain_ollama import ChatOllama
 
-OLLAMA_URL = "http://192.168.188.24:11434" # Change here, if your Ollama host runs on a different machine
+OLLAMA_URL = "http://localhost:11434" # Change here, if your Ollama host runs on a different machine
 
 def get_model(model_name: str, temperature: int = 0.1):
     return ChatOllama(model=model_name, temperature=temperature, base_url=OLLAMA_URL)
